@@ -15,6 +15,6 @@ public class MailController {
 
     @PostMapping("/send")
     public void sendMessage(@RequestBody XMail mail) {
-        XMailSender.sendHtml(mail.to, mail.subject,mail.text);
+        XMailSender.sendPlainText(mail.to, mail.subject,mail.text);
     }
 }
